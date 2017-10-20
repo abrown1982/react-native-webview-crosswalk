@@ -2,7 +2,7 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import ReactNative, { requireNativeComponent, View } from 'react-native';
+import ReactNative, { requireNativeComponent, View, ViewPropTypes } from 'react-native';
 var createReactClass = require('create-react-class');
 var {
     NativeModules: { UIManager, CrosswalkWebViewManager: { JSNavigationScheme } }
@@ -113,7 +113,7 @@ CrosswalkWebView.propTypes = {
         PropTypes.number,           // used internally by React packager
     ]),
     url: PropTypes.string,
-    ...View.propTypes
+    ...ViewPropTypes
 }
 
 CrosswalkWebView.defaultProps = {
